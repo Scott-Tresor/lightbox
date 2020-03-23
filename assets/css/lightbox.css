@@ -8,6 +8,7 @@
     z-index: 10;
     overflow: auto;
     animation: lightboxIn .5s;
+    transition: opacity .3s;
 }
 .lightbox__next,
 .lightbox__apres {
@@ -47,11 +48,17 @@
     right: 20px;
     z-index: 12;
 }
+
 .lightbox__container img{
     max-width: 100%;
     height: auto;
     animation: lightboxIn .5s;
 }
+
+.lightbox.fadeOut{
+    opacity: 0;
+}
+
 .lightbox__container{
     display: flex;
     align-items: center;
@@ -59,6 +66,12 @@
     margin-left: 50px;
     margin-right: 50px;
     min-width: 100vh;
+}
+.lightbox__loader{
+    width: 38px;
+    height: 38px;
+    opacity: .5;
+    background: url(img/imo2.svg) center center no-repeat;
 }
 
 @keyframes lightboxIn {
